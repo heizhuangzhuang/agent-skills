@@ -1,6 +1,6 @@
 # Agent Skills Collection
 
-本地个人 AI Agent Skills 合集（共 **38** 个），适配 Antigravity / Claude Code / Codex / Cursor 等支持 `SKILL.md` 规范的编程助手。
+本地个人 AI Agent Skills 合集（共 **39** 个），适配 Antigravity / Claude Code / Codex / Cursor 等支持 `SKILL.md` 规范的编程助手。
 
 ## 快速安装到本地
 
@@ -25,6 +25,7 @@ cp -R skills/* ~/.gemini/config/skills/
 | [`java-hibernate-jpa`](./skills/java-hibernate-jpa/SKILL.md) | `java-hibernate-jpa` | Diagnose and fix Hibernate ORM / Jakarta Persistence problems in plain Java: N+1 queries, lazy loading errors, identifier generation, ent... |
 | [`java-junit`](./skills/java-junit/SKILL.md) | `java-junit` | Write, review and fix Java unit tests with JUnit 5 and JUnit 6 (Jupiter), AssertJ and Mockito: assertions, parameterized and nested tests... |
 | [`java-springboot`](./skills/java-springboot/SKILL.md) | `java-springboot` | Write and review application code in an existing Spring Boot 3/4 project: controllers, validation and ProblemDetail errors, Spring Data J... |
+| [`literature-translation`](./skills/literature-translation/SKILL.md) | `literature-translation` | Translates, reorganizes, and edits academic or medical research papers (PDFs, manuscripts, DOIs) into objective, legally compliant, plai... |
 | [`miniprogram-development`](./skills/miniprogram-development/SKILL.md) | `miniprogram-development` | WeChat Mini Program development skill for building, debugging, previewing, testing, publishing, and optimizing mini program projects (小程序... |
 | [`multi-stage-dockerfile`](./skills/multi-stage-dockerfile/SKILL.md) | `multi-stage-dockerfile` | Create optimized multi-stage Dockerfiles for any language or framework |
 | [`openapi-to-application-code`](./skills/openapi-to-application-code/SKILL.md) | `openapi-to-application-code` | Generate a complete, production-ready application from an OpenAPI specification |

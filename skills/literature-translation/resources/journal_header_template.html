@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  /*
+   * IMPORTANT: Replace these CSS variables with the REAL official cover / website brand colors
+   * of the target journal (do NOT reuse the default blue for every journal).
+   * Examples:
+   * - AOGS (Wiley): Crimson Red (--top-bg:#6e1022, --banner-start:#9e1b32, --banner-end:#781224, --accent:#d4a359)
+   * - Pediatrics (AAP): "Green Journal" (--top-bg:#004229, --banner-start:#006d44, --banner-end:#004f31, --accent:#f0b429)
+   * - Elsevier (e.g. Early Human Development): Elsevier Orange + Teal (--top-bg:#e85d04, --banner-start:#005f73, --banner-end:#0a3d4a, --accent:#ff8c42)
+   * - SYSU Medical Journal: SYSU Forest Green (--top-bg:#003818, --banner-start:#005826, --banner-end:#00401b, --accent:#c5a059)
+   */
+  :root {
+    --top-bg: {{TOP_BAR_BG}};
+    --banner-start: {{BANNER_GRADIENT_START}};
+    --banner-end: {{BANNER_GRADIENT_END}};
+    --accent-color: {{ACCENT_BORDER_COLOR}};
+    --badge-bg: {{BADGE_BG}};
+    --badge-text: {{BADGE_TEXT}};
+    --link-color: {{LINK_COLOR}};
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    background: #ffffff;
+    color: #1a1a1a;
+    width: 960px;
+    padding: 0;
+  }
+  .publisher-top {
+    background: var(--top-bg);
+    color: #ffffff;
+    padding: 12px 36px;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .publisher-top .brand { font-weight: 700; font-size: 15px; letter-spacing: 0.6px; }
+  .journal-banner {
+    background: linear-gradient(135deg, var(--banner-start) 0%, var(--banner-end) 100%);
+    color: #ffffff;
+    padding: 24px 36px;
+    border-bottom: 4px solid var(--accent-color);
+  }
+  .journal-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 1.25;
+  }
+  .journal-sub {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.86);
+    margin-top: 6px;
+  }
+  .article-box {
+    padding: 28px 36px 32px 36px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .meta-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 12.5px;
+    color: #475569;
+  }
+  .badge {
+    background: var(--badge-bg);
+    color: var(--badge-text);
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 11.5px;
+  }
+  .article-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.32;
+    margin-bottom: 10px;
+  }
+  .article-title-zh {
+    font-size: 15px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 14px;
+  }
+  .authors {
+    font-size: 14px;
+    color: var(--link-color);
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .citation-line {
+    font-size: 13px;
+    color: #475569;
+    line-height: 1.5;
+    padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+  }
+  .doi { color: var(--link-color); font-family: "SFMono-Regular", Menlo, monospace; font-size: 12.5px; }
+</style>
+</head>
+<body>
+  <div class="publisher-top">
+    <span class="brand">{{PUBLISHER_PLATFORM}}</span>
+    <span>{{SOCIETY_OR_AFFILIATION}}</span>
+  </div>
+  <div class="journal-banner">
+    <div class="journal-name">{{JOURNAL_FULL_ENGLISH_NAME}}</div>
+    <div class="journal-sub">{{JOURNAL_SUBTITLE_OR_ABBR}}</div>
+  </div>
+  <div class="article-box">
+    <div class="meta-row">
+      <span class="badge">{{ARTICLE_TYPE}}</span>
+      <span>{{VOLUME_ISSUE_DATE_PAGES}}</span>
+    </div>
+    <div class="article-title">{{ARTICLE_ENGLISH_TITLE}}</div>
+    {{OPTIONAL_ZH_SUBTITLE_BLOCK}}
+    <div class="authors">{{AUTHORS_LIST}}</div>
+    <div class="citation-line">
+      Published: {{PUB_YEAR}} &nbsp;&bull;&nbsp; <span class="doi">{{DOI_OR_ISSN}}</span> &nbsp;&bull;&nbsp; {{KEY_SAMPLE_HIGHLIGHT}}
+    </div>
+  </div>
+</body>
+</html>

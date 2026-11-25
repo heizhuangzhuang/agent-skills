@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, sans-serif;
+    background: #ffffff;
+    color: #1e293b;
+    width: 960px;
+    padding: 28px 34px;
+  }
+  .header {
+    border-left: 5px solid #005b94;
+    padding-left: 14px;
+    margin-bottom: 22px;
+  }
+  .header h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 4px;
+  }
+  .header p {
+    font-size: 13px;
+    color: #64748b;
+  }
+  .section {
+    margin-bottom: 20px;
+  }
+  .section-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #005b94;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 13.5px;
+  }
+  .label {
+    width: 280px;
+    flex-shrink: 0;
+    color: #334155;
+    font-weight: 500;
+  }
+  .bar-wrap {
+    flex: 1;
+    background: #f1f5f9;
+    height: 22px;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 14px;
+  }
+  .bar { height: 100%; border-radius: 4px; }
+  .bar.blue { background: #2563eb; }
+  .bar.teal { background: #0d9488; }
+  .bar.amber { background: #d97706; }
+  .bar.slate { background: #64748b; }
+  .val {
+    width: 205px;
+    flex-shrink: 0;
+    font-size: 13px;
+    color: #0f172a;
+    font-weight: 600;
+    text-align: right;
+  }
+  .val span {
+    font-weight: 400;
+    color: #64748b;
+    font-size: 12px;
+  }
+  .footnote {
+    margin-top: 14px;
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.55;
+    background: #f8fafc;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <!-- 使用客观中性的数据标题，仅展示研究统计事实，不使用承诺性或情绪安抚性措辞 -->
+    <h1>{{OBJECTIVE_CHART_MAIN_TITLE_ZH}}</h1>
+    <!-- 客观交代数据来源与样本范围，例如：数据来源：XX 团队 (2023) 单中心回顾性研究（83 例） -->
+    <p>数据来源：{{OBJECTIVE_SOURCE_AND_SAMPLE_SHORT_ZH}}</p>
+  </div>
+
+  <!-- Copy .section blocks for each outcome group -->
+  <div class="section">
+    <div class="section-title">{{SECTION_1_TITLE_ZH}}</div>
+    <div class="row">
+      <div class="label">{{OUTCOME_LABEL_ZH}}</div>
+      <div class="bar-wrap"><div class="bar blue" style="width: 10%;"></div></div>
+      <div class="val">10.0% <span>(n/N)</span></div>
+    </div>
+  </div>
+
+  <div class="footnote">
+    注：本图仅为公开学术论文数据的可视化整理，不构成任何医疗建议；{{METHODOLOGICAL_CAVEATS_AND_BIAS_NOTES_ZH}}
+  </div>
+</body>
+</html>
